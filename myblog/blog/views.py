@@ -23,7 +23,7 @@ class PostDetailView(DetailView):
     model = Post
 
 
-class CreatePostView(LoginRequiredMixin, CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
     form_class = Post
